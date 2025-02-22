@@ -1,1 +1,51 @@
-hi teeeeeeeeeeeeeest
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cross-Domain Iframe with Click Redirection</title>
+<style>
+.iframe-container {
+position: relative;
+width: 100%;
+height: 100vh;
+margin: 0 auto;
+overflow: hidden;
+border: none;
+}
+
+iframe {
+width: 100%;
+height: 100%;
+border: none;
+display: block;
+}
+
+/* Invisible clickable layer */
+.click-overlay {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: transparent;
+cursor: pointer;
+z-index: 10;
+}
+</style>
+</head>
+<body>
+
+<div class="iframe-container">
+<!-- Clickable transparent overlay -->
+<a href="https://go.fiverr.com/visit/?bta=1096571&brand=fiverrmarketplace&landingPage=https%253A%252F%252Fwww.fiverr.com%252Fsearch%252Fgigs%253Fquery%253Dwebsite%252520fix" class="click-overlay"></a>
+
+<!-- Embedded iframe -->
+<iframe
+src="https://www.fiverr.com/search/gigs?query=website%20fix&listingsType=gigs"
+scrolling="no">
+</iframe>
+</div>
+
+</body>
+</html>
